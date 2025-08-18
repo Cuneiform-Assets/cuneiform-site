@@ -183,8 +183,8 @@ export default function Home() {
               <p className="text-gray-300">
                 c/o SHRM Trustees (BVI) Limited, Trinity Chambers, PO Box 4301, Road Town, Tortola, British Virgin Islands
               </p>
-              <a href="mailto:contact@cuneiform.io" className="text-blue-400 hover:text-blue-300 text-lg">
-              contact@cuneiform.io
+              <a href="mailto:contact@cuneiformassets.io" className="text-blue-400 hover:text-blue-300 text-lg">
+              contact@cuneiformassets.io
               </a>
             </div>
             
