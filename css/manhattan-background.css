@@ -1,0 +1,292 @@
+/* Manhattan Urban Background Styles */
+
+div.hero-fullscreen.manhattan-background,
+.hero-fullscreen.manhattan-background {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background-image: url('../img/manhattan.jpg') !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    z-index: 1 !important;
+    animation: dramaticZoom 15s ease-in-out infinite alternate !important;
+    transform-origin: center center !important;
+    overflow: hidden !important;
+}
+
+/* Apply lighter gradient overlay to preserve night city visibility */
+div.hero-fullscreen.manhattan-background::before,
+.hero-fullscreen.manhattan-background::before {
+    content: '' !important;
+    position: absolute !important;
+    top: -10% !important;
+    left: -10% !important;
+    right: -10% !important;
+    bottom: -10% !important;
+    background: linear-gradient(135deg, 
+        rgba(5, 10, 20, 0.35) 0%,
+        rgba(15, 20, 30, 0.3) 25%,
+        rgba(25, 30, 40, 0.25) 50%,
+        rgba(15, 20, 30, 0.3) 75%,
+        rgba(5, 10, 20, 0.35) 100%
+    ) !important;
+    z-index: 2 !important;
+    pointer-events: none !important;
+}
+
+.manhattan-gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(ellipse at center top,
+            rgba(59, 130, 246, 0.08) 0%,
+            rgba(139, 92, 246, 0.04) 30%,
+            transparent 70%
+        ),
+        linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.6) 0%,
+            rgba(0, 0, 0, 0.4) 50%,
+            rgba(0, 0, 0, 0.7) 100%
+        );
+}
+
+.city-lights-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+
+.light-streak {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(to bottom,
+        transparent 0%,
+        rgba(59, 130, 246, 0.6) 20%,
+        rgba(59, 130, 246, 0.3) 50%,
+        rgba(59, 130, 246, 0.6) 80%,
+        transparent 100%
+    );
+    opacity: 0.6;
+    animation: city-flicker 4s ease-in-out infinite alternate;
+}
+
+.light-1 {
+    left: 25%;
+    background: linear-gradient(to bottom,
+        transparent 0%,
+        rgba(59, 130, 246, 0.5) 20%,
+        rgba(59, 130, 246, 0.3) 50%,
+        rgba(59, 130, 246, 0.5) 80%,
+        transparent 100%
+    );
+    animation-delay: 0s;
+}
+
+.light-2 {
+    right: 33%;
+    background: linear-gradient(to bottom,
+        transparent 0%,
+        rgba(139, 92, 246, 0.5) 20%,
+        rgba(139, 92, 246, 0.3) 50%,
+        rgba(139, 92, 246, 0.5) 80%,
+        transparent 100%
+    );
+    animation-delay: 1.5s;
+}
+
+.light-3 {
+    left: 66%;
+    background: linear-gradient(to bottom,
+        transparent 0%,
+        rgba(34, 197, 194, 0.4) 20%,
+        rgba(34, 197, 194, 0.2) 50%,
+        rgba(34, 197, 194, 0.4) 80%,
+        transparent 100%
+    );
+    animation-delay: 3s;
+}
+
+.dark-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+@keyframes city-flicker {
+    0% { opacity: 0.4; }
+    25% { opacity: 0.6; }
+    50% { opacity: 0.5; }
+    75% { opacity: 0.7; }
+    100% { opacity: 0.4; }
+}
+
+@keyframes slowZoomIn {
+    0% { 
+        transform: scale(1) !important;
+        opacity: 1 !important;
+    }
+    100% { 
+        transform: scale(1.25) !important;
+        opacity: 1 !important;
+    }
+}
+
+/* Alternative dramatic zoom effect */
+@keyframes dramaticZoom {
+    0% { 
+        transform: scale(0.9) !important;
+    }
+    50% {
+        transform: scale(1.1) !important;
+    }
+    100% { 
+        transform: scale(1.3) !important;
+    }
+}
+
+/* Enhanced TextTrail Container */
+#texttrail-container {
+    position: relative !important;
+    z-index: 100 !important;
+    min-height: 120px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+#texttrail-container canvas {
+    filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.5)) !important;
+    z-index: 101 !important;
+}
+
+/* News/Whitepaper Section Background */
+#news {
+    position: relative !important;
+    background-image: url('../img/city_2.jpg') !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+}
+
+#news::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background: linear-gradient(135deg, 
+        rgba(0, 0, 0, 0.4) 0%,
+        rgba(10, 15, 25, 0.5) 50%,
+        rgba(0, 0, 0, 0.4) 100%
+    ) !important;
+    z-index: 1 !important;
+}
+
+/* Lighten the news section background image */
+#news {
+    filter: grayscale(0.5) brightness(0.75) contrast(1.15) !important;
+}
+
+/* Add overlay to parallax-facts section */
+.parallax-facts {
+    position: relative !important;
+}
+
+.parallax-facts::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background: linear-gradient(135deg, 
+        rgba(0, 0, 0, 0.25) 0%,
+        rgba(15, 15, 20, 0.35) 50%,
+        rgba(0, 0, 0, 0.25) 100%
+    ) !important;
+    z-index: 1 !important;
+}
+
+#news .container,
+#news .container-fluid {
+    position: relative !important;
+    z-index: 2 !important;
+}
+
+/* Ensure hero content is above background */
+.hero-center-container {
+    position: relative !important;
+    z-index: 50 !important;
+}
+
+.hero-center-block {
+    position: relative !important;
+    z-index: 51 !important;
+}
+
+/* Darken and desaturate city background images */
+.img-fullwidth-services-1,
+.img-fullwidth-services-2 {
+    position: relative !important;
+}
+
+.img-fullwidth-services-1::before,
+.img-fullwidth-services-2::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background: linear-gradient(135deg, 
+        rgba(0, 0, 0, 0.3) 0%,
+        rgba(20, 20, 25, 0.4) 50%,
+        rgba(0, 0, 0, 0.3) 100%
+    ) !important;
+    z-index: 1 !important;
+}
+
+/* Add subtle grayscale filter to city images */
+.img-fullwidth-services-1,
+.img-fullwidth-services-2,
+.parallax-facts {
+    filter: grayscale(0.4) brightness(0.8) contrast(1.1) !important;
+}
+
+/* Manhattan background gets minimal treatment to preserve night city visibility */
+div.hero-fullscreen.manhattan-background {
+    filter: grayscale(0.1) brightness(0.95) contrast(1.02) !important;
+}
+
+/* Ensure content in services sections stays above overlay */
+.img-fullwidth-services-1 .center-container,
+.img-fullwidth-services-2 .center-container {
+    position: relative !important;
+    z-index: 2 !important;
+}
+
+/* Ensure content in parallax-facts section stays above overlay */
+.parallax-facts .container,
+.parallax-facts .container-fluid,
+.parallax-facts .sections {
+    position: relative !important;
+    z-index: 2 !important;
+}

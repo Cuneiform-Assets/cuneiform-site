@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Debug TextTrail and Manhattan Background</title>
+    <style>
+        body { background: #000; color: #fff; font-family: Arial; }
+        .debug-section { margin: 20px; padding: 20px; border: 1px solid #333; }
+        #test-canvas { border: 1px solid #fff; }
+        .bg-test { 
+            width: 300px; 
+            height: 200px; 
+            border: 1px solid #fff; 
+            margin: 10px 0;
+        }
+        .manhattan-test {
+            background: url('img/manhattan.jpg') center/cover;
+        }
+        .hero-test {
+            background: 
+                linear-gradient(135deg, 
+                    rgba(15, 23, 42, 0.7) 0%,
+                    rgba(30, 41, 59, 0.6) 25%,
+                    rgba(51, 65, 85, 0.5) 50%,
+                    rgba(30, 41, 59, 0.6) 75%,
+                    rgba(15, 23, 42, 0.7) 100%
+                ),
+                url('img/manhattan.jpg') center/cover;
+        }
+    </style>
+</head>
+<body>
+    <h1>Debug Page</h1>
+    
+    <div class="debug-section">
+        <h2>Manhattan Image Test</h2>
+        <div class="bg-test manhattan-test">Direct image background</div>
+        <div class="bg-test hero-test">With gradient overlay</div>
+    </div>
+    
+    <div class="debug-section">
+        <h2>TextTrail Test</h2>
+        <div id="texttrail-container"></div>
+        <canvas id="test-canvas" width="400" height="100"></canvas>
+    </div>
+    
+    <script src="js/texttrail.js"></script>
+    <script>
+        console.log('Debug page loaded');
+        
+        // Test Manhattan image
+        const img = new Image();
+        img.onload = () => console.log('Manhattan image loaded successfully');
+        img.onerror = () => console.error('Manhattan image failed to load');
+        img.src = 'img/manhattan.jpg';
+        
+        // Test TextTrail
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Testing TextTrail...');
+            const container = document.getElementById('texttrail-container');
+            
+            if (typeof TextTrail !== 'undefined') {
+                console.log('TextTrail class available');
+                try {
+                    const textTrail = new TextTrail({
+                        text: 'TEST',
+                        fontFamily: 'Arial',
+                        fontWeight: '900'
+                    });
+                    textTrail.appendTo(container);
+                    console.log('TextTrail created successfully');
+                } catch (error) {
+                    console.error('TextTrail error:', error);
+                }
+            } else {
+                console.error('TextTrail class not available');
+            }
+            
+            // Simple canvas test
+            const canvas = document.getElementById('test-canvas');
+            const ctx = canvas.getContext('2d');
+            ctx.fillStyle = '#ff6b6b';
+            ctx.font = '48px Arial';
+            ctx.fillText('Canvas Test', 10, 50);
+            console.log('Simple canvas test completed');
+        });
+    </script>
+</body>
+</html>
