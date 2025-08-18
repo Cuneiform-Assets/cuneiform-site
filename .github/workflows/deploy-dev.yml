@@ -1,0 +1,48 @@
+name: Deploy Dev to GitHub Pages
+
+on:
+  push:
+    branches: [ dev ]
+  pull_request:
+    branches: [ dev ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages-dev"
+  cancel-in-progress: false
+
+jobs:
+  deploy-dev:
+    environment:
+      name: github-pages-dev
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Configure site for dev environment
+        run: |
+          # Fix line endings and make executable
+          if [ -f scripts/build-config.sh ]; then
+            sed -i 's/\r$//' scripts/build-config.sh
+            chmod +x scripts/build-config.sh
+            ./scripts/build-config.sh dev
+          fi
+        
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+        
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+          
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
