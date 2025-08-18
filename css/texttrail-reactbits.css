@@ -1,0 +1,67 @@
+/* ReactBits Circular Text Styles */
+#circular-text-container {
+  width: 180px !important;
+  height: 180px !important;
+  position: relative !important;
+  z-index: 100 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 0 auto 50px auto !important;
+}
+
+.circular-text {
+  margin: 0 auto;
+  border-radius: 50%;
+  width: 180px !important;
+  position: absolute;
+  height: 180px !important;
+  font-weight: 900;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  transform-origin: 50% 50% !important;
+  -webkit-transform-origin: 50% 50% !important;
+  filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.5));
+  left: 50%;
+  top: 50%;
+}
+
+.circular-text span {
+  position: absolute;
+  display: inline-block;
+  font-size: 20px !important;
+  transition: all 0.5s cubic-bezier(0, 0, 0, 1);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  white-space: nowrap;
+}
+
+/* Hover effects */
+.circular-text:hover {
+  transition: all 0.3s ease;
+}
+
+/* Ensure circular text is above background */
+.introduction {
+  position: relative !important;
+  z-index: 101 !important;
+}
+
+/* Custom class styling */
+.custom-circular-text {
+  background: transparent !important;
+}
+
+/* Make asterisks same size as letters but more prominent with theme red color */
+.circular-text .asterisk-char,
+.circular-text span[data-char="*"] {
+  font-size: 30px !important;
+  font-weight: 900 !important;
+  color: #ff264a !important;
+  text-shadow: 0 0 8px rgba(255, 38, 74, 0.6), 2px 2px 4px rgba(0, 0, 0, 0.8) !important;
+  transform-origin: center center !important;
+  line-height: 1 !important;
+  vertical-align: baseline !important;
+  display: inline-block !important;
+  filter: brightness(1.1) !important;
+}
