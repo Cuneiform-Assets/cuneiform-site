@@ -20,9 +20,71 @@
             .legal-text-content h3 {
                 margin-top: 40px;
                 margin-bottom: 20px;
+                text-align: left;
+            }
+            .legal-text-content .post-all-heading {
+                text-align: left;
             }
             .section-heading-all {
                 margin-bottom: 30px;
+            }
+            .toc {
+                position: fixed;
+                left: 20px;
+                top: 100px;
+                width: 250px;
+                background: rgba(0, 0, 0, 0.9);
+                border: 1px solid #ff264a;
+                border-radius: 5px;
+                padding: 20px;
+                max-height: calc(100vh - 140px);
+                overflow-y: auto;
+                z-index: 1000;
+            }
+            .toc h3 {
+                font-family: 'Raleway', sans-serif;
+                font-size: 1.1rem;
+                font-weight: 600;
+                margin: 0 0 15px 0;
+                color: #ff264a;
+                border-bottom: 2px solid #ff264a;
+                padding-bottom: 10px;
+                text-align: left;
+            }
+            .toc ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+            .toc li {
+                margin-bottom: 8px;
+            }
+            .toc a {
+                color: #cccccc;
+                text-decoration: none;
+                font-size: 0.85rem;
+                display: block;
+                padding: 5px;
+                padding-left: 10px;
+                border-radius: 3px;
+                transition: all 0.3s ease;
+                text-align: left;
+            }
+            .toc a:hover, .toc a.active {
+                background: rgba(255, 38, 74, 0.2);
+                color: #ffffff;
+                padding-left: 15px;
+            }
+            .legal-content .container {
+                padding-left: 320px;
+            }
+            @media (max-width: 1024px) {
+                .toc {
+                    display: none;
+                }
+                .legal-content .container {
+                    padding-left: 15px;
+                }
             }
         </style>
     </head>
@@ -56,6 +118,20 @@
         
         <!-- main content start -->
         <section class="legal-content">
+            <!-- table of contents start -->
+            <nav class="toc">
+                <h3>Contents</h3>
+                <ul>
+                    <li><a href="#protocols">1. The Protocols</a></li>
+                    <li><a href="#eligibility">2. Eligibility</a></li>
+                    <li><a href="#risks">3. Risks & Disclaimers</a></li>
+                    <li><a href="#warranty">4. No Warranty</a></li>
+                    <li><a href="#liability">5. Limitation of Liability</a></li>
+                    <li><a href="#governing-law">6. Governing Law</a></li>
+                    <li><a href="#contact">7. Contact Information</a></li>
+                </ul>
+            </nav><!-- table of contents end -->
+
             <!-- divider start -->
             <div class="inner-divider-large"></div><!-- divider end -->
             <!-- container start -->
@@ -72,7 +148,7 @@
                         </div><!-- back button end -->
                         
                         <!-- title start -->
-                        <h1 class="section-heading section-heading-all section-heading-light">
+                        <h1 class="section-heading section-heading-all section-heading-light" style="text-align: left;">
                             Terms of Use
                         </h1>
                         
@@ -101,7 +177,7 @@
                                 <p>"Babylon Foundation", "we", "our", or "us" means the Babylon Foundation, an exempted Cayman Islands foundation company.</p>
                             </div>
                             
-                            <h3 class="post-all-heading post-all-heading-dark">1. THE PROTOCOLS</h3>
+                            <h3 id="protocols" class="post-all-heading post-all-heading-dark">1. THE PROTOCOLS</h3>
                             <div class="section-txt">
                                 <p>You might want to interact with the Babylon Bitcoin staking protocol, the Babylon time-stamping protocol, and Babylon Genesis and its native token BABY (the "Babylon Protocols"), and other publicly available protocols and networks such as the Bitcoin protocol (together with the Babylon Protocols, the "Protocols"). Anyone with internet access and technical sophistication can interact directly with the Protocols.</p>
                                 
@@ -114,7 +190,7 @@
                                 <p><strong>Your Keys, Your Coins.</strong> The Website is provided by us and the Babylon Protocols were developed by one or more of our company affiliates and paid licensors (each and collectively, a "Provider") as well as a community of contributors. Provider is not an agent or intermediary. Provider does not store, have access to or control over any of your Digital Assets, private keys, passwords, accounts or other property of yours. Provider is not capable of performing transactions or sending transaction messages on your behalf. Provider does not hold or have the ability to purchase, sell or trade any of your Digital Assets. All transactions relating to the Protocol are executed and recorded solely through your interactions with the respective blockchains. The interactions are not under the control of or affiliated with Provider.</p>
                             </div>
                             
-                            <h3 class="post-all-heading post-all-heading-dark">2. ELIGIBILITY</h3>
+                            <h3 id="eligibility" class="post-all-heading post-all-heading-dark">2. ELIGIBILITY</h3>
                             <div class="section-txt">
                                 <p>You are not eligible to access or use any Service, and you represent and warrant that you will not access or use any of the Website:</p>
                                 
@@ -133,7 +209,7 @@
                                 <p>We reserve the right, in our sole discretion, to determine the eligibility of users for the Protocols (to the extent that we have the capability do so) and the Website. We reserve the right to cease your access or use of the Website at any time, change any indication or rating by us of your participation, at any time without notice, in our sole discretion and for no reason or any reason whatsoever, including for breach of these Terms.</p>
                             </div>
                             
-                            <h3 class="post-all-heading post-all-heading-dark">3. CERTAIN RISKS AND DISCLAIMERS</h3>
+                            <h3 id="risks" class="post-all-heading post-all-heading-dark">3. CERTAIN RISKS AND DISCLAIMERS</h3>
                             <div class="section-txt">
                                 <p>You acknowledge, agree to, and assume the following risks and matters:</p>
                                 
@@ -144,26 +220,26 @@
                                 <p><strong>Technology Risks.</strong> Risks related to blockchain technology in general and Babylon Genesis in particular may impact the usefulness of Babylon Genesis, and, in turn, the utility or value of BABY. The software and hardware, technology and technical concepts and theories applicable to Babylon Genesis and BABY are still in an early development stage and unproven, there is no warranty that Babylon Genesis will achieve any specific level of functionality or success, nor that the underlying technology will be uninterrupted or error-free.</p>
                             </div>
                             
-                            <h3 class="post-all-heading post-all-heading-dark">4. NO WARRANTY, NO REPRESENTATIONS</h3>
+                            <h3 id="warranty" class="post-all-heading post-all-heading-dark">4. NO WARRANTY, NO REPRESENTATIONS</h3>
                             <div class="section-txt">
                                 <p>The Website and Protocols are provided on an "AS IS" and "AS AVAILABLE" basis. Your access and use of the Website and Protocols are at your own risk. There is no representation or warranty that access to the Website or Protocols will be continuous, uninterrupted, timely, or secure; that the information contained in the Website will be accurate, reliable, complete, or current, or that the Website or Protocols will be free from errors, defects, viruses, or other harmful elements.</p>
                                 
                                 <p>No advice, information, or statement made in connection with the Website or Protocols should be treated as creating any warranty concerning the Website or Protocols. There is no endorsement, guarantee, or assumption of responsibility for any advertisements, offers, or statements made by third parties concerning the Website or Protocols.</p>
                             </div>
                             
-                            <h3 class="post-all-heading post-all-heading-dark">5. LIMITATION OF LIABILITY</h3>
+                            <h3 id="liability" class="post-all-heading post-all-heading-dark">5. LIMITATION OF LIABILITY</h3>
                             <div class="section-txt">
                                 <p>Except to the extent otherwise required by applicable law, under no circumstances will any of the Provider Parties be responsible or liable under any theory of liability, whether based in tort, contract, negligence, strict liability, warranty, or otherwise, for any damages of any kind arising from or relating to these Terms or the Website, including but not limited to direct, indirect, economic, exemplary, special, punitive, incidental, or consequential losses or damages of any kind, including without limitation, loss of profits.</p>
                                 
                                 <p>Except to the extent otherwise required by applicable law, if, notwithstanding the other provisions of these Terms, any of the Provider Parties is found to be liable to you for any damages or losses which arise from or relate to these Terms or the Website, the total aggregate liability of the Provider Parties for any and all such claims, regardless of the form of action, is limited to one hundred US dollars (US$100.00).</p>
                             </div>
                             
-                            <h3 class="post-all-heading post-all-heading-dark">6. GOVERNING LAW</h3>
+                            <h3 id="governing-law" class="post-all-heading post-all-heading-dark">6. GOVERNING LAW</h3>
                             <div class="section-txt">
                                 <p>These Terms and any action related thereto will be governed by the laws of the Cayman Islands, without regard to the principles of conflict of laws. The exclusive jurisdiction for all Disputes will be the courts located in the Cayman Islands, and you waive any objection to jurisdiction and venue in such courts.</p>
                             </div>
                             
-                            <h3 class="post-all-heading post-all-heading-dark">7. CONTACT INFORMATION</h3>
+                            <h3 id="contact" class="post-all-heading post-all-heading-dark">7. CONTACT INFORMATION</h3>
                             <div class="section-txt">
                                 <p>If you have any questions about these Terms, please contact us at <a href="mailto:legal@cuneiformassets.io" class="link-underline-light">legal@cuneiformassets.io</a>.</p>
                             </div>
@@ -189,8 +265,38 @@
             </div><!-- container end -->
         </section><!-- main content end -->
         
-        <!-- scripts start --> 
-        <script src="js/plugins.js"></script> 
+        <!-- scripts start -->
+        <script src="js/plugins.js"></script>
         <script src="js/blackex.js"></script><!-- scripts end -->
+
+        <script>
+            // Scroll spy for table of contents
+            document.addEventListener('DOMContentLoaded', function() {
+                const sections = document.querySelectorAll('h3[id]');
+                const navLinks = document.querySelectorAll('.toc a');
+
+                function setActiveLink() {
+                    let current = '';
+
+                    sections.forEach(section => {
+                        const sectionTop = section.offsetTop;
+                        const sectionHeight = section.clientHeight;
+                        if (pageYOffset >= sectionTop - 150) {
+                            current = section.getAttribute('id');
+                        }
+                    });
+
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === '#' + current) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+
+                window.addEventListener('scroll', setActiveLink);
+                setActiveLink(); // Set initial active state
+            });
+        </script>
     </body>
 </html>
