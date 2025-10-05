@@ -11,16 +11,8 @@
     <link href="css/manhattan-background.css" media="all" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900%7CMontserrat:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" type="text/css">
     <style>
-        .terms-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 100px 20px 50px;
-            background: rgba(0, 0, 0, 0.8);
-            color: #ffffff;
-            line-height: 1.6;
-        }
         .terms-header {
-            text-align: center;
+            text-align: left;
             margin-bottom: 50px;
         }
         .terms-header h1 {
@@ -29,6 +21,7 @@
             font-size: 2.5rem;
             margin-bottom: 20px;
             color: #ffffff;
+            text-align: left;
         }
         .terms-header p {
             font-size: 1.1rem;
@@ -45,18 +38,21 @@
             color: #ffffff;
             border-bottom: 2px solid #ff264a;
             padding-bottom: 10px;
+            text-align: left;
         }
         .terms-content h3 {
             font-size: 1.2rem;
             font-weight: 600;
             margin: 25px 0 10px;
             color: #ffffff;
+            text-align: left;
         }
         .terms-content h4 {
             font-size: 1.1rem;
             font-weight: 500;
             margin: 20px 0 8px;
             color: #ffffff;
+            text-align: left;
         }
         .terms-content p {
             margin-bottom: 15px;
@@ -97,10 +93,96 @@
             padding: 20px;
             margin: 20px 0;
             border-radius: 5px;
+            text-align: left;
+        }
+        .toc {
+            position: fixed;
+            left: 20px;
+            top: 100px;
+            width: 250px;
+            background: rgba(0, 0, 0, 0.9);
+            border: 1px solid #ff264a;
+            border-radius: 5px;
+            padding: 20px;
+            max-height: calc(100vh - 140px);
+            overflow-y: auto;
+            z-index: 1000;
+        }
+        .toc h3 {
+            font-family: 'Raleway', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 0 0 15px 0;
+            color: #ff264a;
+            border-bottom: 2px solid #ff264a;
+            padding-bottom: 10px;
+            text-align: left;
+        }
+        .toc ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .toc li {
+            margin-bottom: 8px;
+        }
+        .toc a {
+            color: #cccccc;
+            text-decoration: none;
+            font-size: 0.85rem;
+            display: block;
+            padding: 5px;
+            padding-left: 10px;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+            text-align: left;
+        }
+        .toc a:hover, .toc a.active {
+            background: rgba(255, 38, 74, 0.2);
+            color: #ffffff;
+            padding-left: 15px;
+        }
+        .terms-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 100px 20px 50px 300px;
+            background: rgba(0, 0, 0, 0.8);
+            color: #ffffff;
+            line-height: 1.6;
+        }
+        @media (max-width: 1024px) {
+            .toc {
+                display: none;
+            }
+            .terms-container {
+                padding: 100px 20px 50px;
+            }
         }
     </style>
 </head>
 <body>
+    <nav class="toc">
+        <h3>Contents</h3>
+        <ul>
+            <li><a href="#clause1">1. Definitions</a></li>
+            <li><a href="#clause2">2. Terms & Conditions</a></li>
+            <li><a href="#clause3">3. Limitations</a></li>
+            <li><a href="#clause4">4. General</a></li>
+            <li><a href="#clause5">5. Representations</a></li>
+            <li><a href="#clause6">6. Risks & Liabilities</a></li>
+            <li><a href="#clause7">7. Disclaimer</a></li>
+            <li><a href="#clause8">8. Limitation of Liability</a></li>
+            <li><a href="#clause9">9. Indemnity</a></li>
+            <li><a href="#clause10">10. Intellectual Property</a></li>
+            <li><a href="#clause11">11. Third-Party Content</a></li>
+            <li><a href="#clause12">12. Dispute Resolution</a></li>
+            <li><a href="#clause13">13. Governing Law</a></li>
+            <li><a href="#clause14">14. Miscellaneous</a></li>
+            <li><a href="#schedule1">Schedule 1: Prohibited Jurisdictions</a></li>
+            <li><a href="#schedule2">Schedule 2: Risk Disclosures</a></li>
+        </ul>
+    </nav>
+
     <div class="terms-container">
         <a href="index.html" class="back-button">← Back to Home</a>
         
@@ -122,7 +204,7 @@
                 <p><strong>EVEN IF YOU MEET THE ELIGIBILITY CRITERIA ON THE REGISTRATION PORTAL AND COMPLY WITH THESE AIRDROP TERMS, WE RESERVE THE RIGHT AT ALL TIMES TO REVOKE YOUR ELIGIBILITY TO PARTICIPATE IN THE AIRDROP AT ANY TIME IN WHOLE OR IN PART, WITH OR WITHOUT CAUSE.</strong></p>
             </div>
 
-            <h2>CLAUSE 1. DEFINITIONS AND INTERPRETATION</h2>
+            <h2 id="clause1">CLAUSE 1. DEFINITIONS AND INTERPRETATION</h2>
 
             <p><strong>"Affiliates"</strong> means, with respect to any specified Person, any director, officer, partner, member, agent, advisor, contractor or employee of such Person and any other Person that, directly or indirectly, through one or more intermediaries, controls, is controlled by, or is under common control with, that Person.</p>
 
@@ -138,7 +220,7 @@
 
             <p><strong>"U.S. Person"</strong> means any U.S. citizen or U.S. Person as defined in 17 CFR § 230.902; any natural person resident in the United States of America; any partnership or corporation organized or incorporated under the laws of the United States of America; or any other entity meeting the definition under applicable U.S. securities laws.</p>
 
-            <h2>CLAUSE 2. TERMS AND CONDITIONS, STATUS, AND ACCEPTANCE</h2>
+            <h2 id="clause2">CLAUSE 2. TERMS AND CONDITIONS, STATUS, AND ACCEPTANCE</h2>
 
             <h3>2.1. Binding Agreement</h3>
             <p>These Airdrop Terms constitute a legally binding obligation on you effective upon the earlier to occur of the date and time: (i) you click the check box on the Registration Portal to indicate that you have read, understand, and agree to these Airdrop Terms; (ii) you participate in the Airdrop hosted by the Issuer; (iii) you receive any Tokens from the Issuer Group or from any third party; or (iv) have any Tokens registered or recorded in a manner associated with your wallet or wallets.</p>
@@ -155,7 +237,7 @@
             <h3>2.5. No Guarantee of Tokens</h3>
             <p>Registering for the Airdrop does not guarantee that you will receive Tokens or create an obligation for the Issuer Group to give you Tokens. Your participation is subject to passing anti-money laundering, counter-terrorism financing, and other diligence and eligibility checks.</p>
 
-            <h2>CLAUSE 3. LIMITATIONS ON REGISTRATION AND RECEIPT OF TOKENS</h2>
+            <h2 id="clause3">CLAUSE 3. LIMITATIONS ON REGISTRATION AND RECEIPT OF TOKENS</h2>
 
             <div class="highlight">
                 <p><strong>TOKENS ARE ONLY INTENDED TO BE RECEIVED BY THOSE PERSONS WHO ARE KNOWLEDGEABLE AND EXPERIENCED IN CRYPTOGRAPHIC TECHNOLOGIES. BY REGISTERING FOR THE AIRDROP, RECEIVING, HOLDING, OR USING THE TOKENS, YOU ACKNOWLEDGE THAT TRANSACTIONS USING CRYPTOGRAPHIC TECHNOLOGIES ARE INHERENTLY EXPERIMENTAL AND VOLATILE AND YOU AGREE TO ACCEPT THAT RISK.</strong></p>
@@ -170,7 +252,7 @@
             <h3>3.3. Regulatory Compliance</h3>
             <p>The airdrop registration is solely available on the basis that the tokens do not require that a prospectus be prepared in any permitted jurisdiction nor that any other disclosure or registration requirements be met.</p>
 
-            <h2>CLAUSE 4. GENERAL</h2>
+            <h2 id="clause4">CLAUSE 4. GENERAL</h2>
 
             <h3>4.1. Effectiveness</h3>
             <p>These Airdrop Terms are effective and binding on you, and the covenants, representations, and warranties set out herein are repeated each time you use the Tokens for any purpose or use or access the Platform.</p>
@@ -181,7 +263,7 @@
             <h3>4.4. Amendments</h3>
             <p>We may change, add, remove, or modify these Airdrop Terms including any provisions in these Airdrop Terms, at any time in our sole discretion. If we do, we will post the changes on this page and will indicate at the top of this page the date these Airdrop Terms were last revised.</p>
 
-            <h2>CLAUSE 5. REPRESENTATIONS AND WARRANTIES; COVENANTS</h2>
+            <h2 id="clause5">CLAUSE 5. REPRESENTATIONS AND WARRANTIES; COVENANTS</h2>
 
             <h3>5.1. Your Representations</h3>
             <p>You represent and warrant that on the date hereof:</p>
@@ -194,7 +276,7 @@
                 <li>You are aware of all the merits, risks, and any restrictions associated with Cryptographic Technologies</li>
             </ul>
 
-            <h2>CLAUSE 6. RISKS OF TOKENS AND LIMITATIONS OF LIABILITIES</h2>
+            <h2 id="clause6">CLAUSE 6. RISKS OF TOKENS AND LIMITATIONS OF LIABILITIES</h2>
 
             <h3>6.1. Risk Acknowledgment</h3>
             <p>You understand and acknowledge that Tokens and Cryptographic Technologies are not exclusively controlled by the Issuer Group, and adverse changes in market forces or the technology may prevent or compromise the Issuer's performance under these Airdrop Terms.</p>
@@ -202,32 +284,32 @@
             <h3>6.2. Risk Factors</h3>
             <p>You do hereby confirm that you have read and fully understood the risk factors and accept the risks identified therein.</p>
 
-            <h2>CLAUSE 7. DISCLAIMER OF WARRANTIES</h2>
+            <h2 id="clause7">CLAUSE 7. DISCLAIMER OF WARRANTIES</h2>
 
             <div class="highlight">
                 <p><strong>THE PLATFORM AND ANY DELIVERED TOKENS ARE PROVIDED TO THE FULLEST EXTENT LEGALLY PERMISSIBLE TO YOU "AS IS" AND ON AN "AS AVAILABLE" BASIS WITH NO REPRESENTATION OR WARRANTY OF ANY KIND, EITHER STATUTORY, EXPRESSED, OR IMPLIED.</strong></p>
             </div>
 
-            <h2>CLAUSE 8. LIMITATION OF LIABILITY</h2>
+            <h2 id="clause8">CLAUSE 8. LIMITATION OF LIABILITY</h2>
 
             <div class="highlight">
                 <p><strong>ALL DELIVERIES OF TOKENS FROM THE ISSUER GROUP ARE FINAL AND NON-REFUNDABLE. BY REGISTERING FOR THE AIRDROP AND RECEIVING TOKENS FROM THE ISSUER GROUP, YOU ACKNOWLEDGE AND AGREE THAT NONE OF THE ISSUER GROUP NOR ANY OF THE FOUNDERS OF THE ISSUER GROUP NOR ANY OF THEIR PAST, PRESENT, OR FUTURE AFFILIATES ARE REQUIRED TO PROVIDE A REFUND FOR ANY REASON.</strong></p>
             </div>
 
-            <h2>CLAUSE 9. INDEMNITY</h2>
+            <h2 id="clause9">CLAUSE 9. INDEMNITY</h2>
 
             <p>You do hereby, to the fullest extent permitted by Applicable Law, indemnify, defend, and hold the Issuer and each other Relevant Party harmless from and against any and all loss, penalty, claim, damage, liability, or expense whatsoever due to or arising out of or based upon any inaccurate representation or warranty made by you, or breach or failure by you to comply with any covenant or agreement made by you in these Airdrop Terms.</p>
 
-            <h2>CLAUSE 10. INTELLECTUAL PROPERTY RIGHTS</h2>
+            <h2 id="clause10">CLAUSE 10. INTELLECTUAL PROPERTY RIGHTS</h2>
 
             <h3>10.1. Ownership</h3>
             <p>You acknowledge as between you and the Issuer Group that the Issuer Group has valid, unrestricted, and exclusive ownership of all rights, title, and interest to use the patents, trademarks, trademark registrations, trade names, copyrights, know-how, technology, and other intellectual property rights to and subsisting in the Platform, Tokens, and the Registration Portal.</p>
 
-            <h2>CLAUSE 11. THIRD-PARTY CONTENT</h2>
+            <h2 id="clause11">CLAUSE 11. THIRD-PARTY CONTENT</h2>
 
             <p>The Platform may contain links to third-party websites and services. Such links are provided for your convenience. Neither the Issuer Group nor the Platform Operator shall be considered to make any recommendation or endorsement of any third-party website or its content unless expressly stated.</p>
 
-            <h2>CLAUSE 12. APPLICABLE LAW AND DISPUTE RESOLUTION</h2>
+            <h2 id="clause12">CLAUSE 12. APPLICABLE LAW AND DISPUTE RESOLUTION</h2>
 
             <h3>12.1. Arbitration Agreement</h3>
             <p>Please read the arbitration provisions in this Section 12 of these Airdrop Terms carefully. It requires you to arbitrate disputes with the Issuer Group and limits the manner in which you can seek relief from the Issuer Parties.</p>
@@ -238,11 +320,11 @@
             <h3>12.3. Applicability of Arbitration Agreement</h3>
             <p>All unresolved disputes, claims, or controversies arising out of or relating to any of the Tokens, the Airdrop, the Airdrop Portal, or these Airdrop Terms will be finally and exclusively settled by arbitration administered by the London Court of International Arbitration ("LCIA").</p>
 
-            <h2>CLAUSE 13. GOVERNING LAW</h2>
+            <h2 id="clause13">CLAUSE 13. GOVERNING LAW</h2>
 
             <p>These Airdrop Terms and any action related thereto will be governed by the laws of the Cayman Islands, without regard to the principles of conflict of laws.</p>
 
-            <h2>CLAUSE 14. MISCELLANEOUS</h2>
+            <h2 id="clause14">CLAUSE 14. MISCELLANEOUS</h2>
 
             <h3>14.1. Content; Permitted Use</h3>
             <p>Unless otherwise noted, all text, graphics, user interfaces, visual interfaces, photographs, trademarks, logos, sounds, music, artwork and computer code contained in the Services is owned, controlled or licensed by or to us and is protected by trade dress, copyright, patent and trademark laws.</p>
@@ -308,7 +390,7 @@
             <p>Headings are for convenience only and shall not be used to limit or construe any provisions of these Airdrop Terms. The word "or" as used in this Airdrop Terms has an inclusive meaning, equivalent to "and/or".</p>
 
             <div class="schedule">
-                <h2>SCHEDULE 1 - LIST OF PROHIBITED JURISDICTIONS</h2>
+                <h2 id="schedule1">SCHEDULE 1 - LIST OF PROHIBITED JURISDICTIONS</h2>
                 <p>The following jurisdictions are prohibited from participating in the airdrop:</p>
                 <ul>
                     <li>Afghanistan</li>
@@ -349,7 +431,7 @@
             </div>
 
             <div class="schedule">
-                <h2>SCHEDULE 2 - RISK DISCLOSURES: CERTAIN RISK FACTORS</h2>
+                <h2 id="schedule2">SCHEDULE 2 - RISK DISCLOSURES: CERTAIN RISK FACTORS</h2>
                 
                 <div class="highlight">
                     <p><strong>ACQUIRING TOKENS INVOLVES A HIGH DEGREE OF RISK. PROSPECTIVE CLAIMANTS SHOULD CONSIDER CAREFULLY THE RISKS DESCRIBED HEREIN, TOGETHER WITH ALL OF THE OTHER INFORMATION CONTAINED IN THESE AIRDROP TERMS AND THE INFORMATION MATERIALS BEFORE MAKING A DECISION TO REGISTER FOR THE AIRDROP OR RECEIVE TOKENS.</strong></p>
@@ -404,5 +486,35 @@
             <p>If you have any questions or notice any bugs, errors, or violations, you may send any questions regarding the use of the Platform or regarding these Airdrop Terms via the Registration Portal.</p>
         </div>
     </div>
+
+    <script>
+        // Scroll spy for table of contents
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('h2[id], h3[id]');
+            const navLinks = document.querySelectorAll('.toc a');
+
+            function setActiveLink() {
+                let current = '';
+
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (pageYOffset >= sectionTop - 150) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#' + current) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', setActiveLink);
+            setActiveLink(); // Set initial active state
+        });
+    </script>
 </body>
 </html>
