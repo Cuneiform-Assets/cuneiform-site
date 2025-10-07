@@ -315,6 +315,17 @@
             </div><!-- container end -->
         </section><!-- main content end -->
         
+        <!-- suppress console logs in production -->
+        <script>
+            // Suppress console logging
+            if (typeof console !== 'undefined') {
+                console.log = function() {};
+                console.warn = function() {};
+                console.info = function() {};
+                console.debug = function() {};
+            }
+        </script>
+
         <!-- scripts start -->
         <script src="js/plugins.js"></script>
         <script src="js/blackex.js"></script><!-- scripts end -->
