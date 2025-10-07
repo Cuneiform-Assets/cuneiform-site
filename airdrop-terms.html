@@ -487,6 +487,17 @@
         </div>
     </div>
 
+    <!-- suppress console logs in production -->
+    <script>
+        // Suppress console logging
+        if (typeof console !== 'undefined') {
+            console.log = function() {};
+            console.warn = function() {};
+            console.info = function() {};
+            console.debug = function() {};
+        }
+    </script>
+
     <script>
         // Scroll spy for table of contents
         document.addEventListener('DOMContentLoaded', function() {
