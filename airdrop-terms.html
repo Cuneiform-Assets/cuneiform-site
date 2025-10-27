@@ -11,76 +11,30 @@
     <link href="css/manhattan-background.css" media="all" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900%7CMontserrat:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" type="text/css">
     <style>
-        .terms-header {
+        .legal-text-content .section-txt p {
             text-align: left;
-            margin-bottom: 50px;
-        }
-        .terms-header h1 {
-            font-family: 'Raleway', sans-serif;
-            font-weight: 700;
-            font-size: 2.5rem;
             margin-bottom: 20px;
-            color: #ffffff;
+        }
+        .legal-text-content h2 {
+            margin-top: 40px;
+            margin-bottom: 20px;
             text-align: left;
         }
-        .terms-header p {
-            font-size: 1.1rem;
-            color: #cccccc;
-        }
-        .terms-content {
-            font-family: 'Raleway', sans-serif;
-            font-size: 0.95rem;
-        }
-        .terms-content h2 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin: 30px 0 15px;
-            color: #ffffff;
-            border-bottom: 2px solid #ff264a;
-            padding-bottom: 10px;
+        .legal-text-content h3 {
+            margin-top: 40px;
+            margin-bottom: 20px;
             text-align: left;
         }
-        .terms-content h3 {
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin: 25px 0 10px;
-            color: #ffffff;
-            text-align: left;
-        }
-        .terms-content h4 {
-            font-size: 1.1rem;
-            font-weight: 500;
-            margin: 20px 0 8px;
-            color: #ffffff;
-            text-align: left;
-        }
-        .terms-content p {
+        .legal-text-content h4 {
+            margin-top: 30px;
             margin-bottom: 15px;
             text-align: left;
         }
-        .terms-content ul, .terms-content ol {
-            margin: 15px 0;
-            padding-left: 30px;
+        .legal-text-content .post-all-heading {
+            text-align: left;
         }
-        .terms-content li {
-            margin-bottom: 8px;
-        }
-        .back-button {
-            display: inline-block;
-            background: #ff264a;
-            color: white;
-            padding: 12px 30px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-family: 'Raleway', sans-serif;
-            font-weight: 600;
+        .section-heading-all {
             margin-bottom: 30px;
-            transition: background 0.3s ease;
-        }
-        .back-button:hover {
-            background: #e01e3c;
-            color: white;
-            text-decoration: none;
         }
         .highlight {
             background: rgba(255, 38, 74, 0.1);
@@ -142,69 +96,119 @@
             color: #ffffff;
             padding-left: 15px;
         }
-        .terms-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 100px 20px 50px 300px;
-            background: rgba(0, 0, 0, 0.8);
-            color: #ffffff;
-            line-height: 1.6;
+        .legal-content .container {
+            padding-left: 320px;
         }
         @media (max-width: 1024px) {
             .toc {
                 display: none;
             }
-            .terms-container {
-                padding: 100px 20px 50px;
+            .legal-content .container {
+                padding-left: 15px;
             }
         }
     </style>
 </head>
 <body>
-    <nav class="toc">
-        <h3>Contents</h3>
-        <ul>
-            <li><a href="#clause1">1. Definitions</a></li>
-            <li><a href="#clause2">2. Terms & Conditions</a></li>
-            <li><a href="#clause3">3. Limitations</a></li>
-            <li><a href="#clause4">4. General</a></li>
-            <li><a href="#clause5">5. Representations</a></li>
-            <li><a href="#clause6">6. Risks & Liabilities</a></li>
-            <li><a href="#clause7">7. Disclaimer</a></li>
-            <li><a href="#clause8">8. Limitation of Liability</a></li>
-            <li><a href="#clause9">9. Indemnity</a></li>
-            <li><a href="#clause10">10. Intellectual Property</a></li>
-            <li><a href="#clause11">11. Third-Party Content</a></li>
-            <li><a href="#clause12">12. Dispute Resolution</a></li>
-            <li><a href="#clause13">13. Governing Law</a></li>
-            <li><a href="#clause14">14. Miscellaneous</a></li>
-            <li><a href="#schedule1">Schedule 1: Prohibited Jurisdictions</a></li>
-            <li><a href="#schedule2">Schedule 2: Risk Disclosures</a></li>
-        </ul>
-    </nav>
-
-    <div class="terms-container">
-        <a href="index.html" class="back-button">← Back to Home</a>
-        
-        <div class="terms-header">
-            <h1>Airdrop Terms</h1>
-            <p><strong>Last Updated:</strong> 21 February 2025 (first version)</p>
+    <!-- preloader start -->
+    <div class="preloader-bg"></div>
+    <div id="preloader">
+        <div id="preloader-status">
+            <div class="preloader-position loader">
+                <span></span>
+            </div>
         </div>
+    </div><!-- preloader end -->
+    
+    <!-- header start -->
+    <div class="simple-header">
+        <!-- container start -->
+        <div class="container">
+            <!-- row start -->
+            <div class="row">
+                <!-- col start -->
+                <div class="col-lg-12">
+                    <div style="text-align: center; padding: 40px 0;">
+                        <!-- logo start -->
+                        <a href="index.html"><img alt="Cuneiform Logo" src="img/cuneiform-logo-light.svg" style="height: 60px;"></a>
+                    </div>
+                </div><!-- col end -->
+            </div><!-- row end -->
+        </div><!-- container end -->
+    </div><!-- header end -->
+    
+    <!-- main content start -->
+    <section class="legal-content">
+        <!-- table of contents start -->
+        <nav class="toc">
+            <h3>Contents</h3>
+            <ul>
+                <li><a href="#clause1">1. Definitions</a></li>
+                <li><a href="#clause2">2. Terms & Conditions</a></li>
+                <li><a href="#clause3">3. Limitations</a></li>
+                <li><a href="#clause4">4. General</a></li>
+                <li><a href="#clause5">5. Representations</a></li>
+                <li><a href="#clause6">6. Risks & Liabilities</a></li>
+                <li><a href="#clause7">7. Disclaimer</a></li>
+                <li><a href="#clause8">8. Limitation of Liability</a></li>
+                <li><a href="#clause9">9. Indemnity</a></li>
+                <li><a href="#clause10">10. Intellectual Property</a></li>
+                <li><a href="#clause11">11. Third-Party Content</a></li>
+                <li><a href="#clause12">12. Dispute Resolution</a></li>
+                <li><a href="#clause13">13. Governing Law</a></li>
+                <li><a href="#clause14">14. Miscellaneous</a></li>
+                <li><a href="#schedule1">Schedule 1: Prohibited Jurisdictions</a></li>
+                <li><a href="#schedule2">Schedule 2: Risk Disclosures</a></li>
+            </ul>
+        </nav><!-- table of contents end -->
 
-        <div class="terms-content">
-            <div class="highlight">
-                <p><strong>Please read these Airdrop Terms carefully before interacting with or otherwise using the registration features of the website located at airdrop.babylon.foundation as of the date above or the API used to register for the BABY airdrop referred to here airdrop-api.babylon.foundation (each and together, the "Registration Portal") as they apply to you and each individual, entity, group, or association (each and collectively, "you", "your") who view, interacts with, links to, or otherwise use the Registration Portal.</strong></p>
-            </div>
+        <!-- divider start -->
+        <div class="inner-divider-large"></div><!-- divider end -->
+        <!-- container start -->
+        <div class="container">
+            <!-- row start -->
+            <div class="row">
+                <!-- col start -->
+                <div class="col-lg-12">
+                    <!-- back button start -->
+                    <div style="margin-bottom: 40px;">
+                        <a href="index.html" class="the-button the-button-details">
+                            ← Back to Home
+                        </a>
+                    </div><!-- back button end -->
+                    
+                    <!-- title start -->
+                    <h1 class="section-heading section-heading-all section-heading-light" style="text-align: left;">
+                        Airdrop Terms
+                    </h1>
+                    
+                    <div style="margin: 20px 0;">
+                        <p class="section-txt" style="font-style: italic; color: #999;">
+                            <strong>Last Updated:</strong> 21 February 2025 (first version)
+                        </p>
+                    </div>
 
-            <p>Your use of the Registration Portal serves as your acceptance of these Airdrop Terms. You agree to comply with all of these Airdrop Terms. You are entering into this agreement with Cuneiform Assets Ltd. ("we", "our"), which is the entity conducting the Airdrop and distributing Tokens.</p>
+                    <!-- divider start -->
+                    <div class="inner-divider-large"></div><!-- divider end -->
 
-            <p>If you do not meet the eligibility requirements set out on the Registration Portal or are otherwise not in compliance with these Airdrop Terms, you must not interact with, or access, or otherwise use the Registration Portal. Please note that the registration process will not work with all wallets or hardware security devices.</p>
+                    <!-- content start -->
+                    <div class="legal-text-content">
+                        <div class="section-txt">
+                            <div class="highlight">
+                                <p><strong>Please read these Airdrop Terms carefully before interacting with or otherwise using the registration features of the website located at airdrop.babylon.foundation as of the date above or the API used to register for the BABY airdrop referred to here airdrop-api.babylon.foundation (each and together, the "Registration Portal") as they apply to you and each individual, entity, group, or association (each and collectively, "you", "your") who view, interacts with, links to, or otherwise use the Registration Portal.</strong></p>
+                            </div>
 
-            <div class="highlight">
-                <p><strong>EVEN IF YOU MEET THE ELIGIBILITY CRITERIA ON THE REGISTRATION PORTAL AND COMPLY WITH THESE AIRDROP TERMS, WE RESERVE THE RIGHT AT ALL TIMES TO REVOKE YOUR ELIGIBILITY TO PARTICIPATE IN THE AIRDROP AT ANY TIME IN WHOLE OR IN PART, WITH OR WITHOUT CAUSE.</strong></p>
-            </div>
+                            <p>Your use of the Registration Portal serves as your acceptance of these Airdrop Terms. You agree to comply with all of these Airdrop Terms. You are entering into this agreement with Cuneiform Assets Ltd. ("we", "our"), which is the entity conducting the Airdrop and distributing Tokens.</p>
 
-            <h2 id="clause1">CLAUSE 1. DEFINITIONS AND INTERPRETATION</h2>
+                            <p>If you do not meet the eligibility requirements set out on the Registration Portal or are otherwise not in compliance with these Airdrop Terms, you must not interact with, or access, or otherwise use the Registration Portal. Please note that the registration process will not work with all wallets or hardware security devices.</p>
+
+                            <div class="highlight">
+                                <p><strong>EVEN IF YOU MEET THE ELIGIBILITY CRITERIA ON THE REGISTRATION PORTAL AND COMPLY WITH THESE AIRDROP TERMS, WE RESERVE THE RIGHT AT ALL TIMES TO REVOKE YOUR ELIGIBILITY TO PARTICIPATE IN THE AIRDROP AT ANY TIME IN WHOLE OR IN PART, WITH OR WITHOUT CAUSE.</strong></p>
+                            </div>
+                        </div>
+                        
+                        <h2 id="clause1" class="post-all-heading post-all-heading-dark">CLAUSE 1. DEFINITIONS AND INTERPRETATION</h2>
+                        <div class="section-txt">
 
             <p><strong>"Affiliates"</strong> means, with respect to any specified Person, any director, officer, partner, member, agent, advisor, contractor or employee of such Person and any other Person that, directly or indirectly, through one or more intermediaries, controls, is controlled by, or is under common control with, that Person.</p>
 
@@ -220,111 +224,131 @@
 
             <p><strong>"U.S. Person"</strong> means any U.S. citizen or U.S. Person as defined in 17 CFR § 230.902; any natural person resident in the United States of America; any partnership or corporation organized or incorporated under the laws of the United States of America; or any other entity meeting the definition under applicable U.S. securities laws.</p>
 
-            <h2 id="clause2">CLAUSE 2. TERMS AND CONDITIONS, STATUS, AND ACCEPTANCE</h2>
-
-            <h3>2.1. Binding Agreement</h3>
+                        </div>
+                        
+                        <h2 id="clause2" class="post-all-heading post-all-heading-dark">CLAUSE 2. TERMS AND CONDITIONS, STATUS, AND ACCEPTANCE</h2>
+                        <div class="section-txt">
+                            <h3>2.1. Binding Agreement</h3>
             <p>These Airdrop Terms constitute a legally binding obligation on you effective upon the earlier to occur of the date and time: (i) you click the check box on the Registration Portal to indicate that you have read, understand, and agree to these Airdrop Terms; (ii) you participate in the Airdrop hosted by the Issuer; (iii) you receive any Tokens from the Issuer Group or from any third party; or (iv) have any Tokens registered or recorded in a manner associated with your wallet or wallets.</p>
 
-            <h3>2.2. Rights and Obligations</h3>
-            <p>These Airdrop Terms define the rights and obligations of the Parties in relation to the Tokens and your registration to participate in the Airdrop and receive and/or use Tokens.</p>
+                            <h3>2.2. Rights and Obligations</h3>
+                            <p>These Airdrop Terms define the rights and obligations of the Parties in relation to the Tokens and your registration to participate in the Airdrop and receive and/or use Tokens.</p>
 
-            <h3>2.3. Compliance Requirement</h3>
-            <p>You must carefully read and agree to comply with these Airdrop Terms before registering or using any of the Tokens and/or using the Platform.</p>
+                            <h3>2.3. Compliance Requirement</h3>
+                            <p>You must carefully read and agree to comply with these Airdrop Terms before registering or using any of the Tokens and/or using the Platform.</p>
 
-            <h3>2.4. Acceptance</h3>
-            <p>By participating in the Airdrop, including by registering or undertaking any activities which qualify you to receive Tokens and/or using the Platform, you are confirming to each member of the Issuer Group that you have fully read, understand, and irrevocably accept these Airdrop Terms.</p>
+                            <h3>2.4. Acceptance</h3>
+                            <p>By participating in the Airdrop, including by registering or undertaking any activities which qualify you to receive Tokens and/or using the Platform, you are confirming to each member of the Issuer Group that you have fully read, understand, and irrevocably accept these Airdrop Terms.</p>
 
-            <h3>2.5. No Guarantee of Tokens</h3>
-            <p>Registering for the Airdrop does not guarantee that you will receive Tokens or create an obligation for the Issuer Group to give you Tokens. Your participation is subject to passing anti-money laundering, counter-terrorism financing, and other diligence and eligibility checks.</p>
+                            <h3>2.5. No Guarantee of Tokens</h3>
+                            <p>Registering for the Airdrop does not guarantee that you will receive Tokens or create an obligation for the Issuer Group to give you Tokens. Your participation is subject to passing anti-money laundering, counter-terrorism financing, and other diligence and eligibility checks.</p>
+                        </div>
+                        
+                        <h2 id="clause3" class="post-all-heading post-all-heading-dark">CLAUSE 3. LIMITATIONS ON REGISTRATION AND RECEIPT OF TOKENS</h2>
+                        <div class="section-txt">
 
-            <h2 id="clause3">CLAUSE 3. LIMITATIONS ON REGISTRATION AND RECEIPT OF TOKENS</h2>
+                            <div class="highlight">
+                                <p><strong>TOKENS ARE ONLY INTENDED TO BE RECEIVED BY THOSE PERSONS WHO ARE KNOWLEDGEABLE AND EXPERIENCED IN CRYPTOGRAPHIC TECHNOLOGIES. BY REGISTERING FOR THE AIRDROP, RECEIVING, HOLDING, OR USING THE TOKENS, YOU ACKNOWLEDGE THAT TRANSACTIONS USING CRYPTOGRAPHIC TECHNOLOGIES ARE INHERENTLY EXPERIMENTAL AND VOLATILE AND YOU AGREE TO ACCEPT THAT RISK.</strong></p>
+                            </div>
 
-            <div class="highlight">
-                <p><strong>TOKENS ARE ONLY INTENDED TO BE RECEIVED BY THOSE PERSONS WHO ARE KNOWLEDGEABLE AND EXPERIENCED IN CRYPTOGRAPHIC TECHNOLOGIES. BY REGISTERING FOR THE AIRDROP, RECEIVING, HOLDING, OR USING THE TOKENS, YOU ACKNOWLEDGE THAT TRANSACTIONS USING CRYPTOGRAPHIC TECHNOLOGIES ARE INHERENTLY EXPERIMENTAL AND VOLATILE AND YOU AGREE TO ACCEPT THAT RISK.</strong></p>
-            </div>
+                            <h3>3.1. Risk Acknowledgment</h3>
+                            <p>You acknowledge and agree that the Issuer Group is not liable for any loss that you may suffer or incur, and further acknowledge, accept, and assume all risks associated with the Tokens and the Platform.</p>
 
-            <h3>3.1. Risk Acknowledgment</h3>
-            <p>You acknowledge and agree that the Issuer Group is not liable for any loss that you may suffer or incur, and further acknowledge, accept, and assume all risks associated with the Tokens and the Platform.</p>
+                            <h3>3.2. Prohibited Persons</h3>
+                            <p>Tokens are intended to be delivered only to persons that are not prohibited persons and by registering you warrant that you are not a prohibited person.</p>
 
-            <h3>3.2. Prohibited Persons</h3>
-            <p>Tokens are intended to be delivered only to persons that are not prohibited persons and by registering you warrant that you are not a prohibited person.</p>
+                            <h3>3.3. Regulatory Compliance</h3>
+                            <p>The airdrop registration is solely available on the basis that the tokens do not require that a prospectus be prepared in any permitted jurisdiction nor that any other disclosure or registration requirements be met.</p>
+                        </div>
+                        
+                        <h2 id="clause4" class="post-all-heading post-all-heading-dark">CLAUSE 4. GENERAL</h2>
+                        <div class="section-txt">
 
-            <h3>3.3. Regulatory Compliance</h3>
-            <p>The airdrop registration is solely available on the basis that the tokens do not require that a prospectus be prepared in any permitted jurisdiction nor that any other disclosure or registration requirements be met.</p>
+                            <h3>4.1. Effectiveness</h3>
+                            <p>These Airdrop Terms are effective and binding on you, and the covenants, representations, and warranties set out herein are repeated each time you use the Tokens for any purpose or use or access the Platform.</p>
 
-            <h2 id="clause4">CLAUSE 4. GENERAL</h2>
+                            <h3>4.2. Prohibited Persons</h3>
+                            <p>You shall not register or seek to register to participate in the Airdrop and receive Tokens or access or use, or seek to access or use, the Platform if you are a Prohibited Person.</p>
 
-            <h3>4.1. Effectiveness</h3>
-            <p>These Airdrop Terms are effective and binding on you, and the covenants, representations, and warranties set out herein are repeated each time you use the Tokens for any purpose or use or access the Platform.</p>
+                            <h3>4.4. Amendments</h3>
+                            <p>We may change, add, remove, or modify these Airdrop Terms including any provisions in these Airdrop Terms, at any time in our sole discretion. If we do, we will post the changes on this page and will indicate at the top of this page the date these Airdrop Terms were last revised.</p>
+                        </div>
+                        
+                        <h2 id="clause5" class="post-all-heading post-all-heading-dark">CLAUSE 5. REPRESENTATIONS AND WARRANTIES; COVENANTS</h2>
+                        <div class="section-txt">
+                            <h3>5.1. Your Representations</h3>
+                            <p>You represent and warrant that on the date hereof:</p>
+                            <ul style="margin: 20px 0; padding-left: 30px; color: #ccc; text-align: left;"  >
+                                <li>You are not a Prohibited Person</li>
+                                <li>You have legal capacity in the jurisdiction where you are a resident</li>
+                                <li>You are fully able and legally competent to access and use the Platform</li>
+                                <li>You will not violate any Applicable Law by entering into these Airdrop Terms</li>
+                                <li>You have all necessary and relevant experience and knowledge to interact with Cryptographic Technologies</li>
+                                <li>You are aware of all the merits, risks, and any restrictions associated with Cryptographic Technologies</li>
+                            </ul>
+                        </div>
+                        
+                        <h2 id="clause6" class="post-all-heading post-all-heading-dark">CLAUSE 6. RISKS OF TOKENS AND LIMITATIONS OF LIABILITIES</h2>
+                        <div class="section-txt">
 
-            <h3>4.2. Prohibited Persons</h3>
-            <p>You shall not register or seek to register to participate in the Airdrop and receive Tokens or access or use, or seek to access or use, the Platform if you are a Prohibited Person.</p>
+                            <h3>6.1. Risk Acknowledgment</h3>
+                            <p>You understand and acknowledge that Tokens and Cryptographic Technologies are not exclusively controlled by the Issuer Group, and adverse changes in market forces or the technology may prevent or compromise the Issuer's performance under these Airdrop Terms.</p>
 
-            <h3>4.4. Amendments</h3>
-            <p>We may change, add, remove, or modify these Airdrop Terms including any provisions in these Airdrop Terms, at any time in our sole discretion. If we do, we will post the changes on this page and will indicate at the top of this page the date these Airdrop Terms were last revised.</p>
+                            <h3>6.2. Risk Factors</h3>
+                            <p>You do hereby confirm that you have read and fully understood the risk factors and accept the risks identified therein.</p>
+                        </div>
+                        
+                        <h2 id="clause7" class="post-all-heading post-all-heading-dark">CLAUSE 7. DISCLAIMER OF WARRANTIES</h2>
+                        <div class="section-txt">
+                            <div class="highlight">
+                                <p><strong>THE PLATFORM AND ANY DELIVERED TOKENS ARE PROVIDED TO THE FULLEST EXTENT LEGALLY PERMISSIBLE TO YOU "AS IS" AND ON AN "AS AVAILABLE" BASIS WITH NO REPRESENTATION OR WARRANTY OF ANY KIND, EITHER STATUTORY, EXPRESSED, OR IMPLIED.</strong></p>
+                            </div>
+                        </div>
+                        
+                        <h2 id="clause8" class="post-all-heading post-all-heading-dark">CLAUSE 8. LIMITATION OF LIABILITY</h2>
+                        <div class="section-txt">
+                            <div class="highlight">
+                                <p><strong>ALL DELIVERIES OF TOKENS FROM THE ISSUER GROUP ARE FINAL AND NON-REFUNDABLE. BY REGISTERING FOR THE AIRDROP AND RECEIVING TOKENS FROM THE ISSUER GROUP, YOU ACKNOWLEDGE AND AGREE THAT NONE OF THE ISSUER GROUP NOR ANY OF THE FOUNDERS OF THE ISSUER GROUP NOR ANY OF THEIR PAST, PRESENT, OR FUTURE AFFILIATES ARE REQUIRED TO PROVIDE A REFUND FOR ANY REASON.</strong></p>
+                            </div>
+                        </div>
+                        
+                        <h2 id="clause9" class="post-all-heading post-all-heading-dark">CLAUSE 9. INDEMNITY</h2>
+                        <div class="section-txt">
 
-            <h2 id="clause5">CLAUSE 5. REPRESENTATIONS AND WARRANTIES; COVENANTS</h2>
+                            <p>You do hereby, to the fullest extent permitted by Applicable Law, indemnify, defend, and hold the Issuer and each other Relevant Party harmless from and against any and all loss, penalty, claim, damage, liability, or expense whatsoever due to or arising out of or based upon any inaccurate representation or warranty made by you, or breach or failure by you to comply with any covenant or agreement made by you in these Airdrop Terms.</p>
+                        </div>
+                        
+                        <h2 id="clause10" class="post-all-heading post-all-heading-dark">CLAUSE 10. INTELLECTUAL PROPERTY RIGHTS</h2>
+                        <div class="section-txt">
+                            <h3>10.1. Ownership</h3>
+                            <p>You acknowledge as between you and the Issuer Group that the Issuer Group has valid, unrestricted, and exclusive ownership of all rights, title, and interest to use the patents, trademarks, trademark registrations, trade names, copyrights, know-how, technology, and other intellectual property rights to and subsisting in the Platform, Tokens, and the Registration Portal.</p>
+                        </div>
+                        
+                        <h2 id="clause11" class="post-all-heading post-all-heading-dark">CLAUSE 11. THIRD-PARTY CONTENT</h2>
+                        <div class="section-txt">
+                            <p>The Platform may contain links to third-party websites and services. Such links are provided for your convenience. Neither the Issuer Group nor the Platform Operator shall be considered to make any recommendation or endorsement of any third-party website or its content unless expressly stated.</p>
+                        </div>
+                        
+                        <h2 id="clause12" class="post-all-heading post-all-heading-dark">CLAUSE 12. APPLICABLE LAW AND DISPUTE RESOLUTION</h2>
+                        <div class="section-txt">
 
-            <h3>5.1. Your Representations</h3>
-            <p>You represent and warrant that on the date hereof:</p>
-            <ul>
-                <li>You are not a Prohibited Person</li>
-                <li>You have legal capacity in the jurisdiction where you are a resident</li>
-                <li>You are fully able and legally competent to access and use the Platform</li>
-                <li>You will not violate any Applicable Law by entering into these Airdrop Terms</li>
-                <li>You have all necessary and relevant experience and knowledge to interact with Cryptographic Technologies</li>
-                <li>You are aware of all the merits, risks, and any restrictions associated with Cryptographic Technologies</li>
-            </ul>
+                            <h3>12.1. Arbitration Agreement</h3>
+                            <p>Please read the arbitration provisions in this Section 12 of these Airdrop Terms carefully. It requires you to arbitrate disputes with the Issuer Group and limits the manner in which you can seek relief from the Issuer Parties.</p>
 
-            <h2 id="clause6">CLAUSE 6. RISKS OF TOKENS AND LIMITATIONS OF LIABILITIES</h2>
+                            <h3>12.2. Informal Dispute Resolution</h3>
+                            <p>There might be instances when a dispute arises between you and the Issuer Parties. If that happens, you may send a written Notice of Dispute by email to us at legal@cuneiformassets.io.</p>
 
-            <h3>6.1. Risk Acknowledgment</h3>
-            <p>You understand and acknowledge that Tokens and Cryptographic Technologies are not exclusively controlled by the Issuer Group, and adverse changes in market forces or the technology may prevent or compromise the Issuer's performance under these Airdrop Terms.</p>
-
-            <h3>6.2. Risk Factors</h3>
-            <p>You do hereby confirm that you have read and fully understood the risk factors and accept the risks identified therein.</p>
-
-            <h2 id="clause7">CLAUSE 7. DISCLAIMER OF WARRANTIES</h2>
-
-            <div class="highlight">
-                <p><strong>THE PLATFORM AND ANY DELIVERED TOKENS ARE PROVIDED TO THE FULLEST EXTENT LEGALLY PERMISSIBLE TO YOU "AS IS" AND ON AN "AS AVAILABLE" BASIS WITH NO REPRESENTATION OR WARRANTY OF ANY KIND, EITHER STATUTORY, EXPRESSED, OR IMPLIED.</strong></p>
-            </div>
-
-            <h2 id="clause8">CLAUSE 8. LIMITATION OF LIABILITY</h2>
-
-            <div class="highlight">
-                <p><strong>ALL DELIVERIES OF TOKENS FROM THE ISSUER GROUP ARE FINAL AND NON-REFUNDABLE. BY REGISTERING FOR THE AIRDROP AND RECEIVING TOKENS FROM THE ISSUER GROUP, YOU ACKNOWLEDGE AND AGREE THAT NONE OF THE ISSUER GROUP NOR ANY OF THE FOUNDERS OF THE ISSUER GROUP NOR ANY OF THEIR PAST, PRESENT, OR FUTURE AFFILIATES ARE REQUIRED TO PROVIDE A REFUND FOR ANY REASON.</strong></p>
-            </div>
-
-            <h2 id="clause9">CLAUSE 9. INDEMNITY</h2>
-
-            <p>You do hereby, to the fullest extent permitted by Applicable Law, indemnify, defend, and hold the Issuer and each other Relevant Party harmless from and against any and all loss, penalty, claim, damage, liability, or expense whatsoever due to or arising out of or based upon any inaccurate representation or warranty made by you, or breach or failure by you to comply with any covenant or agreement made by you in these Airdrop Terms.</p>
-
-            <h2 id="clause10">CLAUSE 10. INTELLECTUAL PROPERTY RIGHTS</h2>
-
-            <h3>10.1. Ownership</h3>
-            <p>You acknowledge as between you and the Issuer Group that the Issuer Group has valid, unrestricted, and exclusive ownership of all rights, title, and interest to use the patents, trademarks, trademark registrations, trade names, copyrights, know-how, technology, and other intellectual property rights to and subsisting in the Platform, Tokens, and the Registration Portal.</p>
-
-            <h2 id="clause11">CLAUSE 11. THIRD-PARTY CONTENT</h2>
-
-            <p>The Platform may contain links to third-party websites and services. Such links are provided for your convenience. Neither the Issuer Group nor the Platform Operator shall be considered to make any recommendation or endorsement of any third-party website or its content unless expressly stated.</p>
-
-            <h2 id="clause12">CLAUSE 12. APPLICABLE LAW AND DISPUTE RESOLUTION</h2>
-
-            <h3>12.1. Arbitration Agreement</h3>
-            <p>Please read the arbitration provisions in this Section 12 of these Airdrop Terms carefully. It requires you to arbitrate disputes with the Issuer Group and limits the manner in which you can seek relief from the Issuer Parties.</p>
-
-            <h3>12.2. Informal Dispute Resolution</h3>
-            <p>There might be instances when a dispute arises between you and the Issuer Parties. If that happens, you may send a written Notice of Dispute by email to us at legal@cuneiformassets.io.</p>
-
-            <h3>12.3. Applicability of Arbitration Agreement</h3>
-            <p>All unresolved disputes, claims, or controversies arising out of or relating to any of the Tokens, the Airdrop, the Airdrop Portal, or these Airdrop Terms will be finally and exclusively settled by arbitration administered by the London Court of International Arbitration ("LCIA").</p>
-
-            <h2 id="clause13">CLAUSE 13. GOVERNING LAW</h2>
-
-            <p>These Airdrop Terms and any action related thereto will be governed by the laws of the Cayman Islands, without regard to the principles of conflict of laws.</p>
-
-            <h2 id="clause14">CLAUSE 14. MISCELLANEOUS</h2>
+                            <h3>12.3. Applicability of Arbitration Agreement</h3>
+                            <p>All unresolved disputes, claims, or controversies arising out of or relating to any of the Tokens, the Airdrop, the Airdrop Portal, or these Airdrop Terms will be finally and exclusively settled by arbitration administered by the London Court of International Arbitration ("LCIA").</p>
+                        </div>
+                        
+                        <h2 id="clause13" class="post-all-heading post-all-heading-dark">CLAUSE 13. GOVERNING LAW</h2>
+                        <div class="section-txt">
+                            <p>These Airdrop Terms and any action related thereto will be governed by the laws of the Cayman Islands, without regard to the principles of conflict of laws.</p>
+                        </div>
+                        
+                        <h2 id="clause14" class="post-all-heading post-all-heading-dark">CLAUSE 14. MISCELLANEOUS</h2>
+                        <div class="section-txt">
 
             <h3>14.1. Content; Permitted Use</h3>
             <p>Unless otherwise noted, all text, graphics, user interfaces, visual interfaces, photographs, trademarks, logos, sounds, music, artwork and computer code contained in the Services is owned, controlled or licensed by or to us and is protected by trade dress, copyright, patent and trademark laws.</p>
@@ -477,15 +501,29 @@
                 </div>
             </div>
 
-            <div class="highlight">
-                <p><strong>Please ensure you have read and understood all the terms and conditions before participating in the Airdrop.</strong></p>
-            </div>
+                            <div class="highlight">
+                                <p><strong>Please ensure you have read and understood all the terms and conditions before participating in the Airdrop.</strong></p>
+                            </div>
 
-            <p><strong>Intellectual Property Notification:</strong> This document belongs to the Issuer and is protected by copyright laws. Its copying and/or use by any third party in full or in part without prior written consent of the Issuer is strictly prohibited.</p>
+                            <p><strong>Intellectual Property Notification:</strong> This document belongs to the Issuer and is protected by copyright laws. Its copying and/or use by any third party in full or in part without prior written consent of the Issuer is strictly prohibited.</p>
 
-            <p>If you have any questions or notice any bugs, errors, or violations, you may send any questions regarding the use of the Platform or regarding these Airdrop Terms via the Registration Portal.</p>
-        </div>
-    </div>
+                            <p>If you have any questions or notice any bugs, errors, or violations, you may send any questions regarding the use of the Platform or regarding these Airdrop Terms via the Registration Portal.</p>
+                        </div>
+                    </div><!-- content end -->
+                    
+                    <!-- back button start -->
+                    <div style="margin: 60px 0 40px 0; text-align: center;">
+                        <a href="index.html" class="the-button the-button-details">
+                            ← Back to Home
+                        </a>
+                    </div><!-- back button end -->
+                    
+                    <!-- divider start -->
+                    <div class="inner-divider-large"></div><!-- divider end -->
+                </div><!-- col end -->
+            </div><!-- row end -->
+        </div><!-- container end -->
+    </section><!-- main content end -->
 
     <!-- suppress console logs in production -->
     <script>
@@ -498,10 +536,14 @@
         }
     </script>
 
+    <!-- scripts start -->
+    <script src="js/plugins.js"></script>
+    <script src="js/blackex.js"></script><!-- scripts end -->
+
     <script>
         // Scroll spy for table of contents
         document.addEventListener('DOMContentLoaded', function() {
-            const sections = document.querySelectorAll('h2[id], h3[id]');
+            const sections = document.querySelectorAll('h2[id]');
             const navLinks = document.querySelectorAll('.toc a');
 
             function setActiveLink() {
